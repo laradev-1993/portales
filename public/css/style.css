@@ -1,0 +1,560 @@
+:root {
+    /*--- TIPOGRAFÍAS */
+    --tipografia-titulo: "Merriweather", serif;
+    --tipografia-texto: "Montserrat", sans-serif;
+
+    /* Paleta */
+    --crema: #F7F0E4;
+    --blanco-tiza: #FCFAF6;
+    --crema-claro: #F2E9D8;
+    --marron-claro: #BCA591;
+    --marron: #A78356;
+    --marron-oscuro: #351e1b;
+    --rosa-claro: #EED0CD;
+    --bronce: #E9D1C3;
+
+     /* color tipografia */
+    --color-titulo: #04030A; 
+    --color-texto: #1c1916;
+}
+
+
+html, body, #app{
+    height: 100%;
+
+}
+
+.nav-estilo{
+     background-color: var(--crema-claro);
+    border-bottom: 1px solid var(--bronce);
+}
+
+.nav-estilo .nav-link {
+    font-weight: 500;
+    color: var(--color-texto);
+    padding: 0.5rem 1rem;
+}
+
+.nav-estilo .nav-link:hover,
+.nav-estilo .nav-link:focus {
+    color: var(--marron-oscuro);
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
+}
+
+body {
+  font-family: var(--tipografia-texto);
+    background-color: var(--crema);
+    color: var(--color-texto);
+    
+}
+
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--tipografia-titulo);
+    color: var(--color-titulo);
+}
+
+#app{
+     display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/*Degradado banner*/
+/* .hero {
+    background: linear-gradient(
+        to right,
+        var(--crema-claro),
+        var(--marron-claro)
+    );
+} */
+
+.footer{
+    height: 100px;
+     background-color: var(--marron-oscuro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer p{
+    color: var(--crema);
+    margin-bottom: 0;
+    font-family: var(--tipografia-texto);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* <<<<<<<<<<<<< SECCIÓN ADMIN BLOG <<<< */
+
+/* tabla --- FILAS---- */
+
+.entradas-admin .table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.entradas-admin .table tbody tr:nth-child(even) {
+    background-color: var(--crema-claro);
+}
+
+.entradas-admin .table tbody tr:hover {
+    background-color: var(--rosa-claro);
+}
+
+.entradas-admin .table tbody td {
+    padding: 1rem;
+    color: var(--color-texto);
+    border-color: var(--marron-claro);
+    vertical-align: middle;
+}
+
+
+/* BOTONES ADMIN*/
+
+.entradas-admin .btn {
+    font-family: var(--tipografia-texto);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+
+/* Crear */
+
+.entradas-admin .btn-primary {
+    background-color: var(--marron);
+    border-color: var(--marron-oscuro);
+    color: #ffffff;
+    padding: 0.65rem 1.4rem;
+}
+
+.entradas-admin .btn-primary:hover {
+    background-color: #89673e;
+    color: #ffffff;
+}
+
+
+/* Editar */
+
+.entradas-admin .btn-warning {
+    background-color: var(--bronce);
+    border-color: var(--bronce);
+    color: var(--marron-oscuro);
+}
+
+.entradas-admin .btn-warning:hover {
+    background-color: var(--marron-claro);
+    border-color: var(--marron-claro);
+    color: var(--marron-oscuro);
+}
+
+.entrada-imagen-actual {
+    max-width: 300px;
+}
+
+
+/* Eliminar */
+
+.entradas-admin .btn-danger {
+    background-color: transparent;
+    border-color: var(--marron-oscuro);
+    color: var(--marron-oscuro);
+}
+
+.entradas-admin .btn-danger:hover {
+    background-color: var(--marron-oscuro);
+    border-color: var(--marron-oscuro);
+    color: #ffffff;
+}
+
+.entradas-admin-acciones {
+    min-width: 7rem;
+}
+
+
+
+/* <<<<<<<<<<<<< SECCIÓN BLOG <<<< */
+
+
+/* Encabezado */
+
+.blog-banner {
+    min-height: 280px;
+    background-image:
+        linear-gradient(rgba(60, 22, 10, 0.402), rgba(60, 22, 10, 0.228)),
+        url('../img/banner-blog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blog-banner-titulo{
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.603);
+}
+
+.blog-banner-subtitulo {
+    max-width: 32rem;
+     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.603);
+}
+
+
+/* Cada entrada de blog */
+
+.blog-entrada {
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
+}
+
+/* Encabezado del artículo */
+
+.blog-entrada-header {
+    margin-bottom: 1.5rem;
+}
+
+.blog-entrada-titulo {
+    font-family: var(--tipografia-titulo);
+    color: var(--color-titulo);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-entrada-fecha {
+    font-family: var(--tipografia-texto);
+     color: var(--marron-oscuro);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-entrada-categoria {
+    background-color: var(--rosa-claro);
+    color: var(--marron-oscuro);
+    font-family: var(--tipografia-texto);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 0.9rem;
+}
+
+.blog-entrada-extracto {
+    font-family: var(--tipografia-texto);
+    color: var(--color-texto);
+    margin-bottom: 0;
+}
+
+
+/* Imagen */
+
+.blog-entrada-imagen {
+    display: block;
+    max-width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    margin-bottom: 1.7rem;
+    
+}
+
+
+/* Contenido */
+
+.blog-entrada-contenido {
+   
+    font-family: var(--tipografia-texto);
+   color: var(--color-texto);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+.blog-entrada-etiqueta {
+     color: var(--marron);
+    font-family: var(--tipografia-texto);
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* <<<<<<<< FORMULARIO DE ENTRADAS << */
+
+.entrada-formulario-panel {
+    background-color: #ffffff;
+    border: 1px solid var(--bronce);
+}
+
+.entrada-formulario .form-label {
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.entrada-formulario .form-control {
+    border-color: var(--marron-claro);
+}
+
+.entrada-formulario .form-control:focus {
+    border-color: var(--marron);
+    box-shadow: 0 0 0 0.25rem rgba(167, 131, 86, 0.25);
+}
+
+/* Botón principal */
+.entrada-formulario .btn-primary {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: var(--marron-oscuro);
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron);
+    --bs-btn-hover-border-color: var(--marron);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron);
+    --bs-btn-active-border-color: var(--marron);
+}
+
+/* Botón cancelar */
+.entrada-formulario .btn-secondary {
+    --bs-btn-color: var(--marron-oscuro);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron-oscuro);
+    --bs-btn-hover-border-color: var(--marron-oscuro);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron-oscuro);
+    --bs-btn-active-border-color: var(--marron-oscuro);
+}
+
+/* >>>>>>>>--- Formulario de INGRESAR ---<<< */
+
+.login-caja {
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
+}
+
+.login-titulo {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.login-form .form-label {
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.login-form .form-control {
+    border-color: var(--marron-claro);
+}
+
+.login-form .form-control:focus {
+    border-color: var(--marron);
+    box-shadow: 0 0 0 0.25rem rgba(167, 131, 86, 0.25);
+}
+
+/* Botón principal */
+.login-form .boton-login {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: var(--marron-oscuro);
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron);
+    --bs-btn-hover-border-color: var(--marron);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron);
+    --bs-btn-active-border-color: var(--marron);
+
+}
+
+/* >>>----- Abrir-cerrar SESIÓN ----- <<<< */
+
+.nav-estilo .nav-sesion {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.nav-estilo .nav-usuario {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.nav-estilo .boton-salir {
+    --bs-btn-color: var(--marron-oscuro);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron-oscuro);
+    --bs-btn-hover-border-color: var(--marron-oscuro);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron-oscuro);
+    --bs-btn-active-border-color: var(--marron-oscuro);
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0.4rem 1rem;
+}
+
+
+/* ---------------------------- SECCIÓN HOME ------------------- */
+
+/* Banner */
+.home-banner {
+    background: linear-gradient(to right, #937772, #A78987);
+}
+
+.home-banner-titulo,
+.home-banner-texto {
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.home-banner-imagen {
+    display: block;
+    max-width: 100%;
+    max-height: 380px;
+    margin-inline: auto;
+    object-fit: cover;
+    filter: drop-shadow(0 16px 9px rgba(60, 25, 15, 0.25));
+}
+/* Texto centrado angosto */
+.home-texto-centrado {
+    max-width: 40rem;
+}
+
+/* Cards de productos */
+.home-card {
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
+}
+
+.home-card-imagen {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Banner del blog */
+.home-blog {
+    background-image:
+        linear-gradient(rgba(60, 22, 10, 0.55), rgba(60, 22, 10, 0.45)),
+        url('../img/banner-blog.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.home-blog-titulo,
+.home-blog-texto {
+    color: #ffffff;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Imagen de contacto */
+.home-contacto-imagen {
+  width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+     display:block;
+}
+
+/* Botón principal */
+.boton-canela {
+    --bs-btn-color: #ffffff;
+    --bs-btn-bg: var(--marron-oscuro);
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron);
+    --bs-btn-hover-border-color: var(--marron);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron);
+    --bs-btn-active-border-color: var(--marron);
+}
+
+/* Botón de contorno */
+.boton-canela-contorno {
+    --bs-btn-color: var(--marron-oscuro);
+    --bs-btn-bg: transparent;
+    --bs-btn-border-color: var(--marron-oscuro);
+    --bs-btn-hover-color: #ffffff;
+    --bs-btn-hover-bg: var(--marron-oscuro);
+    --bs-btn-hover-border-color: var(--marron-oscuro);
+    --bs-btn-active-color: #ffffff;
+    --bs-btn-active-bg: var(--marron-oscuro);
+    --bs-btn-active-border-color: var(--marron-oscuro);
+}
+
+/* Productos destacados */
+.home-productos {
+   background: #F2E9D8;
+background: radial-gradient(circle,rgba(242, 233, 216, 1) 0%, rgba(167, 131, 86, 1) 100%);
+}
+
+
+/* ---------------------------- SECCIÓN PRODUCTOS ------------------- */
+
+.productos-subtitulo {
+    max-width: 36rem;
+}
+
+.producto-card {
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.producto-nombre {
+    margin-bottom: 0.5rem;
+}
+
+.producto-descripcion {
+    color: var(--color-texto);
+    font-size: 0.95rem;
+}
+
+.producto-precio {
+    font-family: var(--tipografia-titulo);
+    font-size: 1.25rem;
+    color: var(--marron-oscuro);
+    margin-bottom: 1rem;
+}
+
+/* <<<------ SECCIÓN CONTACTO -----<<<<< */
+
+.contacto-subtitulo {
+    max-width: 36rem;
+}
+
+.contacto-datos, .contacto-caja {
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
+}
+
+.contacto-lista li {
+    color: var(--color-texto);
+}
+
+.contacto-form .form-label {
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.contacto-form .form-control {
+    border-color: var(--marron-claro);
+}
+
+.contacto-form .form-control:focus {
+    border-color: var(--marron);
+    box-shadow: 0 0 0 0.25rem rgba(167, 131, 86, 0.25);
+}
