@@ -33,16 +33,21 @@
                     <li class="nav-item">
                     <a class="nav-link" href="<?= route('blog');?>">Blog</a>
                     </li>
+                     <li class="nav-item">
+                    <a class="nav-link" href="<?= route('contacto');?>">Contacto</a>
+                    </li>
                     @auth
                         @if (auth()->user()->rol_fk == 1)
                             <li class="nav-item">
                                 <a class="nav-link" href="<?= route('entradas.index');?>">Administrar Blog</a>
                             </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="<?= route('admin.usuarios.index');?>">Administrar Usuarios</a>
+                            </li>
+                            
                         @endif
                     @endauth
-                    <li class="nav-item">
-                    <a class="nav-link" href="<?= route('contacto');?>">Contacto</a>
-                    </li>
+                   
                 </ul>
                 
                 <ul class="navbar-nav ms-auto align-items-lg-center">

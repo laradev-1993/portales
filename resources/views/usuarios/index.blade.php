@@ -15,6 +15,7 @@
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Rol</th>
+                                    <th scope="col">Acciones</th>
                                 </tr>
                         </thead>
 
@@ -24,6 +25,11 @@
                                         <td>{{ $usuario->name }}</td>
                                         <td>{{ $usuario->email }}</td>
                                         <td>{{ $usuario->rol->nombre }}</td>
+                                        <td>
+                                            <a href="{{ route('admin.usuarios.show', ['usuario' => $usuario->id]) }}" class="btn btn-sm btn-primary">
+                                                Ver detalle
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

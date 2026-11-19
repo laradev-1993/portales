@@ -21,4 +21,16 @@ class UsuarioController extends Controller
             'usuarios' => $usuarios,
         ]);
     }
+
+
+       /**
+        * Muestra el detalle de un usuario, con el rol y los productos que encargó.
+       * 
+        */
+       public function show(User $usuario){
+
+            return view('usuarios.show', [
+                'usuario' => $usuario,
+            ]);
+       }
 }

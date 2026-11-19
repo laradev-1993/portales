@@ -84,3 +84,9 @@ Route::get('/admin/usuarios', [\App\Http\Controllers\UsuarioController::class, '
     ->name('admin.usuarios.index')
     ->middleware('auth')
     ->middleware(\App\Http\Middleware\RequerirAdministrador::class);    
+
+Route::get('/admin/usuarios/{usuario}', [\App\Http\Controllers\UsuarioController::class, 'show'])
+    ->whereNumber('usuario')
+    ->name('admin.usuarios.show')
+    ->middleware('auth')
+    ->middleware(\App\Http\Middleware\RequerirAdministrador::class);    

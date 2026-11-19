@@ -558,3 +558,17 @@ background: radial-gradient(circle,rgba(242, 233, 216, 1) 0%, rgba(167, 131, 86,
     border-color: var(--marron);
     box-shadow: 0 0 0 0.25rem rgba(167, 131, 86, 0.25);
 }
+
+
+/* -------------------- ADMIN USUARIOS -------*/
+
+
+/* Página Detalle usuarios */
+
+.usuario-detalle-card {
+    max-width: 500px;
+}
+
+.entradas-admin-titulo{
+    border-bottom: 1px solid var(--marron);
+}
