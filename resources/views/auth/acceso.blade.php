@@ -8,7 +8,7 @@
                 <div class="login-caja p-4 p-md-5 mb-4 rounded-4">
                 <h1 class="login-titulo mb-4">Iniciar Sesión</h1>
 
-                <form class="login-form" method="POST" action="{{ route('auth.login.process') }}">
+                <form class="login-form" method="POST" action="{{ route('auth.login.process') }}" novalidate>
                      @csrf
 
                     <div class="campo mb-3">

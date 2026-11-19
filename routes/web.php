@@ -21,7 +21,14 @@ Route::post('/ingresar', [\App\Http\Controllers\AuthController::class, 'loginPro
 Route::post('/cerrar-sesion', [\App\Http\Controllers\AuthController::class, 'logout'])
 ->name('auth.logout');
 
+//Registrarse
+Route::get('/registro', [\App\Http\Controllers\AuthController::class, 'registerForm'])
+->name('auth.register.form');
 
+Route::post('/registro', [\App\Http\Controllers\AuthController::class, 'registerProcess'])
+->name('auth.register.process');
+
+//blog
 Route::get('/blog', [\App\Http\Controllers\BlogController::class, 'index'])
 ->name('blog');
 
@@ -90,3 +97,6 @@ Route::get('/admin/usuarios/{usuario}', [\App\Http\Controllers\UsuarioController
     ->name('admin.usuarios.show')
     ->middleware('auth')
     ->middleware(\App\Http\Middleware\RequerirAdministrador::class);    
+
+// Route::post('/productos/{id}/encargar', [\App\Http\Controllers\ProductoEncargarController::class, 'register'])
+//     ->name('producto.encargar.register');

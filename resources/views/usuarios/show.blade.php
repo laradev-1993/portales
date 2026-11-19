@@ -10,7 +10,7 @@
                         {{ $usuario->name }}
                     </h1>
                 
-                   <div class="d-flex flex-row justify-content-start gap-5 text-start">
+                   <dl class="d-flex flex-row justify-content-start gap-5 text-start">
                         <div>
                             <dt>Email</dt>
                             <dd>{{ $usuario->email }}</dd>
@@ -20,7 +20,7 @@
                             <dt>Rol</dt>
                             <dd>{{ $usuario->rol->nombre }}</dd>
                         </div>
-                    </div>
+                    </dl>
                 </div>
             </div>
 
@@ -33,8 +33,8 @@
                             <table class="table table-hover align-middle">
                                 <thead>
                                     <tr>
-                                        <th>Producto</th>
-                                        <th>Precio</th>
+                                        <th scope="col">Producto</th>
+                                        <th scope="col">Precio</th>
                                     </tr>
                                 </thead>
                                 <tbody>

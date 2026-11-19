@@ -63,6 +63,10 @@
                     <li class="nav-item">
                     <a class="nav-link" href="<?= route('auth.login.form');?>">Acceder</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= route('auth.register.form');?>">Registrarme</a>
+                    </li>
                 @endauth
                    
                 </ul>
