@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="card shadow-sm">
+            <div class="card shadow-sm usuario-detalle-encargados">
                 <div class="card-body p-4">
                     <h2 class="fs-4 mb-3">Productos encargados</h2>
 
@@ -54,7 +54,7 @@
                     @endif
 
                     <a href="{{ route('admin.usuarios.index') }}"
-                    class="btn btn-secondary mt-4">
+                    class="boton-canela-contorno btn btn-secondary mt-4">
                         Volver al listado
                     </a>
 

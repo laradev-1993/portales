@@ -567,8 +567,15 @@ background: radial-gradient(circle,rgba(242, 233, 216, 1) 0%, rgba(167, 131, 86,
 
 .usuario-detalle-card {
     max-width: 500px;
+    background-color: var(--blanco-tiza);
+    border: 1px solid var(--bronce);
 }
 
 .entradas-admin-titulo{
     border-bottom: 1px solid var(--marron);
+    border: 1px solid var(--bronce);
+}
+
+.usuario-detalle-encargados{
+     border: 1px solid var(--bronce);
 }

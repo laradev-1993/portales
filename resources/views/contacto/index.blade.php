@@ -21,7 +21,6 @@
                     </div>
                 </div>
 
-{{-- --> MEJORAR LA VISTA DE LAS 2 COLUMNAS  --}}   
 
                 <div class="col-lg-8">
                     <div class="contacto-caja p-4 p-md-5 rounded-4">
