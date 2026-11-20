@@ -47,7 +47,7 @@
                 <div class="col-md-5 col-lg-4">
                     <div class="home-card p-3 rounded-4 text-center h-100">
                         <img src="{{ asset('img/torta-2.jpg') }}" alt="Torta de frutilla" class="home-card-imagen img-fluid rounded-3 mb-3">
-                        <h3 class="fs-5 mb-3">Torta de frutilla</h3>
+                        <h3 class="fs-5 mb-3">Tiramisú Italiano</h3>
                         <a href="{{ route('productos') }}" class="boton-canela btn btn-primary">Ver detalles</a>
                     </div>
                 </div>
