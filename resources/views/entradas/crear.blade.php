@@ -141,7 +141,7 @@
                         aria-describedby="ayuda-imagen"
                         >
                         
-                        <div class="text-muted small" id="ayuda-imagen">Elegir una sola imágen</div>
+                        <div class="text-muted small" id="ayuda-imagen">Elegir una sola imagen</div>
                        
 
                          @error('imagen')

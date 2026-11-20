@@ -153,7 +153,7 @@ $etiquetaIds = $entrada->etiquetas->pluck('etiqueta_id')->all();
                         @if ($entrada->imagen !== null && \Storage::exists($entrada->imagen))
                             <img src="<?= \Storage::url($entrada->imagen); ?>" alt="{{ $entrada->titulo }}" class="entrada-imagen-actual img-fluid rounded-2 shadow-sm mb-3 d-block">
                         @else
-                            <p>Sin imágen.</p>
+                            <p>Sin imagen.</p>
                         @endif
 
                         <label for="imagen" class="form-label">
@@ -174,7 +174,7 @@ $etiquetaIds = $entrada->etiquetas->pluck('etiqueta_id')->all();
                         aria-describedby="ayuda-imagen"
                         >
 
-                        <div class="text-muted small" id="ayuda-imagen">Elegir una sola imágen si deseas cambiar la actual</div>
+                        <div class="text-muted small" id="ayuda-imagen">Elegir una sola imagen si deseas cambiar la actual</div>
                         @error('imagen')
                             <div class="text-danger" id="error-imagen">{{ $message }}</div>
                         @enderror

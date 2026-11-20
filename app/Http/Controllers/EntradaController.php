@@ -62,6 +62,8 @@ class EntradaController extends Controller
             'extracto' => ['required'],
             'cuerpo' => ['required'],
             'categoria_fk' => ['required', 'exists:categorias,id'],
+            'etiqueta_id' => ['nullable', 'array'],
+            'etiqueta_id.*' => ['exists:etiquetas,etiqueta_id'],
             'imagen' => ['required', 'image'],
         ], [
             'titulo.required' => 'El título es obligatorio.', 
@@ -69,6 +71,7 @@ class EntradaController extends Controller
             'extracto.required' => 'El extracto es obligatorio.',
             'cuerpo.required' => 'El cuerpo de la entrada es obligatorio.',
             'categoria_fk.required' => 'Elegí una categoría.',
+            'etiqueta_id.*.exists' => 'Alguna de las etiquetas elegidas no es válida.',
             'imagen.required' => 'La imagen es obligatoria.',
             'imagen.image' => 'El archivo debe ser una imagen de tipo jpg, png.',
             ]);
@@ -128,6 +131,8 @@ class EntradaController extends Controller
             'extracto' => ['required'],
             'cuerpo' => ['required'],
             'categoria_fk' => ['required', 'exists:categorias,id'],
+            'etiqueta_id' => ['nullable', 'array'],
+            'etiqueta_id.*' => ['exists:etiquetas,etiqueta_id'],
             'imagen' => ['nullable', 'image'],
         ], [
             'titulo.required' => 'El título es obligatorio.', 
@@ -135,6 +140,7 @@ class EntradaController extends Controller
             'extracto.required' => 'El extracto es obligatorio.',
             'cuerpo.required' => 'El cuerpo de la entrada es obligatorio.',
             'categoria_fk.required' => 'Elegí una categoría.',
+            'etiqueta_id.*.exists' => 'Alguna de las etiquetas elegidas no es válida.',
             'imagen.image' => 'El archivo debe ser una imagen de tipo jpg, png.',
             ]);
 
@@ -154,7 +160,7 @@ class EntradaController extends Controller
             $entrada->etiquetas()->sync($request->input('etiqueta_id', []));
 
 
-            //Si se cambia la imágen y existe una antigua, se borra la antigua.
+            //Si se cambia la imagen y existe una antigua, se borra la antigua.
             if($request->hasFile('imagen') && $imagenAntigua !== null && Storage::exists($imagenAntigua)){
 
                 Storage::delete($imagenAntigua);
